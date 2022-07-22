@@ -1,6 +1,8 @@
-import Inicial from "./Inicial";
-import ZapScreen from "./ZapScreen";
+import Inicial from "./Inicial/Inicial";
+import ZapScreen from "./ZapScreen/ZapScreen";
 import React from 'react';
+import './reset.css';
+
 export default function App() {
     const [tela, setTela] = React.useState(true);
     return (<>
