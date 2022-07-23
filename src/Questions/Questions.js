@@ -9,7 +9,7 @@ export default function Questions({ cards }) {
         const [asked, setAsked] = React.useState(question.asked);
         return (
             <>
-                {asked ? <Question question={question} /> :
+                {asked ? <Question question={question} index={index+1}/> :
                     <div className="card" onClick={() => setAsked(true)}>
                         <p>Pergunta {index + 1}</p><ion-icon name="play-outline"></ion-icon>
                     </div>
@@ -17,12 +17,12 @@ export default function Questions({ cards }) {
             </>
         )
     }
-    function Question({ question }) {
+    function Question({ question,index }) {
         const [clicked, setClicked] = React.useState(false);
         return (   
             <>             
                 {clicked ? 
-                <Answer  answer={question.answer} />
+                <Answer  answer={question.answer} index={index}/>
                 :                 
                 <div className='question' ><p>{question.question}</p> <img onClick={()=>setClicked(true)} src={turnArrow} /></div>}
              

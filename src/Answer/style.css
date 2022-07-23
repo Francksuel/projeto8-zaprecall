@@ -28,7 +28,38 @@
     border-radius: 5px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: red;
+    align-items: center;    
     text-align: center;
+    cursor: pointer;
+}
+
+.redButton{
+    background-color: #FF3030;
+}
+.yellowButton{
+    background-color: #FF922E;
+}
+.greenButton{
+    background-color: #2FBE34;
+}
+.red{
+    color:#FF3030 !important;
+    text-decoration:line-through;
+}
+ion-icon[name="close-circle"]{
+    color:#FF3030;
+}
+.yellow{
+    color:#FF922E !important;
+    text-decoration:line-through;
+}
+ion-icon[name="help-circle"]{
+    color:#FF922E;
+}
+.green{
+    color:#2FBE34 !important;
+    text-decoration:line-through;
+}
+ion-icon[name="checkmark-circle"]{
+    color:#2FBE34;
 }
