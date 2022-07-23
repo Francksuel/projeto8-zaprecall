@@ -1,0 +1,27 @@
+.questions {
+    overflow-y: scroll;  
+    width: 80%;
+    margin-bottom: 70px;
+}
+.question {
+    width: 100%;
+    height: 65px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 5px 0px #00000026;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;     
+    margin-bottom: 25px;   
+}
+.question ion-icon{
+    width: 28px;
+   height: 31px;
+   margin-right: 15px;
+}
+.question p{
+    font-size: 16px;
+    font-weight: 700;
+    color: #333333;
+    margin-left: 15px;
+}

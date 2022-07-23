@@ -1,14 +1,10 @@
-body {
-    font-family: 'Recursive', sans-serif;
-    box-sizing: border-box;
-}
 .zapScreen {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
     background-color: #FB6B6B;
-    position: relative;
+    position: relative;    
 }
 .logo{
     width: 255px;
