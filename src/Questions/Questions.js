@@ -2,7 +2,7 @@ import './style.css';
 import React from 'react';
 import turnArrow from "./setinha.png"
 import Answer from '../Answer/Answer';
-export default function Questions({ cards }) {
+export default function Questions({ cards,status,setStatus}) {
 
 
     function Card({ question, index }) {
@@ -22,7 +22,7 @@ export default function Questions({ cards }) {
         return (   
             <>             
                 {clicked ? 
-                <Answer  answer={question.answer} index={index}/>
+                <Answer  answer={question.answer} index={index} status={status} setStatus={setStatus}/>
                 :                 
                 <div className='question' ><p>{question.question}</p> <img onClick={()=>setClicked(true)} src={turnArrow} /></div>}
              

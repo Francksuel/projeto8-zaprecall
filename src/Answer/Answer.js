@@ -1,6 +1,6 @@
 import './style.css'
 import React from 'react'
-export default function Answer({ answer, index }) {
+export default function Answer({ answer, index, status, setStatus}) {
 
     function Answered({index,color,icon}) {
         return (
@@ -9,6 +9,10 @@ export default function Answer({ answer, index }) {
             </div>
         )
     }
+    function additem (icon){
+        const newArray=[...status,icon]
+        setStatus(newArray);
+    }
 
     const [answered, setAnswered] = React.useState(false);
     const [color, setColor] = React.useState("");
@@ -16,7 +20,7 @@ export default function Answer({ answer, index }) {
 
     return (
         <>
-            {answered ? <Answered index={index} color={color} icon={icon} /> :
+            {answered ? <Answered index={index} color={color} icon={icon}/> :
                 <div className='answer'>
                     <p>{answer}</p>
                     <div className='answers'>
@@ -24,15 +28,18 @@ export default function Answer({ answer, index }) {
                             setColor("red");
                             setIcon("close-circle");
                             setAnswered(true);
+additem("close-circle");
                         }} >Não lembrei</div>
                         <div className='answersButton yellowButton' onClick={() => {
                             setColor("yellow");
                             setIcon("help-circle");
                             setAnswered(true);
+                            additem("help-circle");
                         }} >Quase não lembrei</div>
                         <div className='answersButton greenButton' onClick={() => {
                             setColor("green");
                             setIcon("checkmark-circle");
+                            additem("checkmark-circle");
                             setAnswered(true);
                         }} >Zap!</div>
                     </div>

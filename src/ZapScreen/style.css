@@ -22,14 +22,3 @@
     font-size: 36px;
     color: #ffffff;
 }
-.zapStatus{
-    width: 100%;
-    height: 70px;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}

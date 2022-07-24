@@ -1,7 +1,9 @@
 import './style.css';
 import logoPequena from './logo-pequeno.png';
 import Questions from '../Questions/Questions';
-export default function ZapScreen() {
+import ZapStatus from '../ZapStatus/ZapStatus';
+import React from 'react';
+export default function ZapScreen({status,setStatus}) {
     const cards=[
         {question:"pergunta 0", answer:"resposta 0", asked:false},
         {question:"pergunta 1", answer:"resposta 1", asked:false},
@@ -11,6 +13,7 @@ export default function ZapScreen() {
         {question:"pergunta 5", answer:"resposta 5", asked:false},     
     ]    
 const randomCards=cards.sort(()=>Math.random() - 0.5);
+
     return (
         <>
         <div className="zapScreen">
@@ -18,10 +21,8 @@ const randomCards=cards.sort(()=>Math.random() - 0.5);
                 <img src={logoPequena} alt="logoPequena"/>
                 <h1>ZapRecall</h1>
             </div>
-            <Questions cards={randomCards} />
-            <div className="zapStatus" >
-            <p>0/4 concluidos</p>
-            </div>
+            <Questions cards={randomCards} status={status} setStatus={setStatus}/>
+            <ZapStatus status={status}/>
         </div>
         </>
     )
