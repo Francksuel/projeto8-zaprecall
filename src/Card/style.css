@@ -6,16 +6,18 @@
     background-color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;     
-    margin-bottom: 25px;   
+    justify-content: space-between;
+    margin-bottom: 25px;
     cursor: pointer;
 }
-.card ion-icon{
+
+.card ion-icon {
     width: 28px;
-   height: 31px;
-   margin-right: 15px;
+    height: 31px;
+    margin-right: 15px;
 }
-.card p{
+
+.card p {
     font-size: 16px;
     font-weight: 700;
     color: #333333;

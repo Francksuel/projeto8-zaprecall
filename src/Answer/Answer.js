@@ -23,7 +23,7 @@ export default function Answer({ answer, index, status, setStatus }) {
             {answered ? <Answered index={index} color={color} icon={icon} /> :
                 <div className='answer'>
                     <p>{answer}</p>
-                    <div className='answers'>
+                    <div className='options'>
                         <div className='answersButton redButton' onClick={() => {
                             setColor("red");
                             setIcon("close-circle");
@@ -38,7 +38,7 @@ export default function Answer({ answer, index, status, setStatus }) {
                         }} >Quase não lembrei</div>
                         <div className='answersButton greenButton' onClick={() => {
                             setColor("green");
-                            setIcon("checkmark-circle");                           
+                            setIcon("checkmark-circle");
                             additem("checkmark-circle");
                             setAnswered(true);
                         }} >Zap!</div>
