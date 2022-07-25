@@ -28,17 +28,34 @@
 }
 
 .result {
-    height: 171px;
+    height: 244px;
 }
-span{
-    display: flex;  
-    align-items: center;  
+
+span {
+    display: flex;
+    align-items: center;
 }
+
 .result img {
     width: 23px;
     height: 23px;
     margin-right: 13px;
 }
-.result h2{
+
+.result h2 {
     font-weight: 700;
+}
+
+.restart {
+    width: 44.5%;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: white;
+    background-color: #FB6B6B;
+    border-radius: 5px;
+    margin-top: 23px;
+    cursor: pointer;
 }

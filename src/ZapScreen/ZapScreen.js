@@ -4,7 +4,7 @@ import Questions from '../Questions/Questions';
 import ZapStatus from '../ZapStatus/ZapStatus';
 import React from 'react';
 
-export default function ZapScreen() {
+export default function ZapScreen({ tela, setTela }) {
     const cards = [
         {
             question: "O que é JSX?",
@@ -47,20 +47,21 @@ export default function ZapScreen() {
             asked: false
         }
     ]
-    const randomCards = cards.sort(() => Math.random() - 0.5);
+    let randomCards = cards.sort(() => Math.random() - 0.5);
     const [deck, setDeck] = React.useState('');
     if (deck === '') {
+        randomCards = randomCards.slice(0, 4);
         setDeck(randomCards);
     }
     const [status, setStatus] = React.useState([]);
-    return (        
-            <div className="zapScreen">
-                <div className="logo">
-                    <img src={logoPequena} alt="logoPequena" />
-                    <h1>ZapRecall</h1>
-                </div>
-                <Questions cards={deck} status={status} setStatus={setStatus} />
-                <ZapStatus status={status} cards={deck} />
-            </div>        
+    return (
+        <div className="zapScreen">
+            <div className="logo">
+                <img src={logoPequena} alt="logoPequena" />
+                <h1>ZapRecall</h1>
+            </div>
+            <Questions cards={deck} status={status} setStatus={setStatus} />
+            <ZapStatus status={status} cards={deck} tela={tela} setTela={setTela} />
+        </div>
     )
 }

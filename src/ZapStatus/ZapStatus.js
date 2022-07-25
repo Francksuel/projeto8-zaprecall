@@ -31,6 +31,7 @@ export default function ZapStatus(props) {
                     <div>
                         {props.status.map((value, index) => <ion-icon name={value} key={index}></ion-icon>)}
                     </div>
+                    <div className='restart' onClick={() => props.setTela(true)}> REINICIAR RECALL</div>
                 </div>
             }
         </>
